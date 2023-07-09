@@ -33,7 +33,7 @@ For example, you can create a Harry Potter chat bot or a bot that answers questi
 
 You can deploy your own version of NestJs Chat Bot with 1-click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https%3A%2F%2Fvercel.com%2Fnew%2Fclone%3Fdemo-title%3DEmbedJs%20%E2%80%93%20Chat%20Bot%26demo-description%3DAI%20chatbot%20that%20uses%20OpenAI%20and%20EmbedJs%20to%20answer%20questions%20on%20any%20private%20dataset.%20This%20demo%20application%20is%20set%20to%20answer%20questions%20about%20Steve%20Jobs.%26demo-url%3Dhttps%3A%2F%2Fgpt-chat-bot-nextjs.vercel.app%26project-name%3DEmbedJs%20Chat%20Bot%20Example%26repository-name%3Dchat-bot-nextjs-template%26repository-url%3Dhttps%3A%2F%2Fgithub.com%2Fllmembed%2Fchat-bot-nextjs-template%26from%3Dtemplates%26skippable-integrations%3D1%26env%3DOPENAI_API_KEY%26envDescription%3DGet%20your%20OpenAI%20API%20key%20here%3A%26envLink%3Dhttps%3A%2F%2Fplatform.openai.com%2Faccount%2Fapi-keys)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fllmembed%2Fchat-bot-nextjs-template&env=OPENAI_API_KEY,PINECONE_API_KEY,PINECONE_ENVIRONMENT&envDescription=OpenAPI%20and%20Pinecone%20both%20provide%20free%20accounts.%20Check%20the%20documentation%20link%20on%20how%20to%20get%20these%20access%20tokens.&envLink=https%3A%2F%2Fgithub.com%2Fllmembed%2Fchat-bot-nextjs-template%23readme&project-name=chat-bot&demo-title=Steve%20Jobs%20Example%20Chat%20Bot&demo-description=This%20example%20chat%20bot%20is%20trained%20to%20answer%20questions%20on%20Steve%20Jobs.%20&demo-url=https%3A%2F%2Fgpt-chat-bot-nextjs.vercel.app%2F&demo-image=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F138303766%3Fs%3D48%26v%3D4)
 
 ## Setting Up Locally
 

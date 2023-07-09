@@ -7,12 +7,12 @@ const nextConfig = {
         return [
             {
                 source: '/github',
-                destination: 'https://github.com/llmembed/chatbot-example',
+                destination: 'https://github.com/llmembed/chat-bot-nextjs-template',
                 permanent: true,
             },
             {
                 source: '/deploy',
-                destination: 'https://vercel.com/templates/next.js/chatbot-example',
+                destination: 'https://vercel.com/templates/next.js/chat-bot-exampl',
                 permanent: true,
             },
         ];
