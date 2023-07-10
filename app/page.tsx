@@ -131,7 +131,7 @@ export default function Chat() {
                         <p className="text-gray-500">
                             This is an{' '}
                             <a
-                                href="https://github.com/llmembed/chatbot-example"
+                                href="https://github.com/llmembed/chat-bot-nextjs-template"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
@@ -236,7 +236,7 @@ export default function Chat() {
                     </a>{' '}
                     or{' '}
                     <a
-                        href="https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/llmembed/chat-bot-nextjs-template&env=OPENAI_API_KEY,PINECONE_API_KEY,PINECONE_ENVIRONMENT&envDescription=OpenAPI and Pinecone both provide free accounts. Check the documentation link on how to get these access tokens.&envLink=https://github.com/llmembed/chat-bot-nextjs-template#readme&project-name=chat-bot&demo-title=Steve Jobs Example Chat Bot&demo-description=This example chat bot is trained to answer questions on Steve Jobs. &demo-url=https://gpt-chat-bot-nextjs.vercel.app/&demo-image=https://avatars.githubusercontent.com/u/138303766?s=48&v=4"
+                        href="https://vercel.com/new/clone?repository-url=https://github.com/llmembed/chat-bot-nextjs-template&env=OPENAI_API_KEY,PINECONE_API_KEY,PINECONE_ENVIRONMENT&envDescription=OpenAPI and Pinecone both provide free accounts. Check the documentation link on how to get these access tokens.&envLink=https://github.com/llmembed/chat-bot-nextjs-template#readme&project-name=chat-bot&demo-title=Steve Jobs Example Chat Bot&demo-description=This example chat bot is trained to answer questions on Steve Jobs. &demo-url=https://gpt-chat-bot-nextjs.vercel.app/&demo-image=https://avatars.githubusercontent.com/u/138303766?s=48&v=4"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors hover:text-black"
