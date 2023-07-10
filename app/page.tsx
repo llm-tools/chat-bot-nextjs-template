@@ -24,34 +24,34 @@ export default function Chat() {
     const [isLoading, setLoading] = useState(false);
     const [messages, setMessages] = useState<{ role: string; content: string }[]>([]);
 
-    const callAPI = async() => {
-        const data = { query: input }
-       
+    const callAPI = async () => {
+        const data = { query: input };
+
         // Send the data to the server in JSON format.
-        const JSONdata = JSON.stringify(data)
-    
+        const JSONdata = JSON.stringify(data);
+
         // API endpoint where we send form data.
-        const endpoint = '/api/chat'
-    
+        const endpoint = '/api/chat';
+
         // Form the request for sending data to the server.
         const options = {
-        // The method is POST because we are sending data.
-        method: 'POST',
-        // Tell the server we're sending JSON.
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        // Body of the request is the JSON data we created above.
-        body: JSONdata,
-        }
-    
+            // The method is POST because we are sending data.
+            method: 'POST',
+            // Tell the server we're sending JSON.
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            // Body of the request is the JSON data we created above.
+            body: JSONdata,
+        };
+
         // Send the form data to our forms API on Vercel and get a response.
-        return fetch(endpoint, options)
-    }
+        return fetch(endpoint, options);
+    };
 
     const handleSubmit = async (event: any) => {
-         // Stop the form from submitting and refreshing the page.
-        event.preventDefault()
+        // Stop the form from submitting and refreshing the page.
+        event.preventDefault();
 
         setLoading(true);
 
@@ -218,21 +218,12 @@ export default function Chat() {
                 <p className="text-center text-xs text-gray-400">
                     Built with{' '}
                     <a
-                        href="https://platform.openai.com/docs/guides/gpt/function-calling"
+                        href="https://github.com/llmembed/embedjs"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors hover:text-black"
                     >
-                        OpenAI Functions
-                    </a>{' '}
-                    and{' '}
-                    <a
-                        href="https://sdk.vercel.ai/docs"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-colors hover:text-black"
-                    >
-                        Vercel AI SDK
+                        EmbedJs
                     </a>
                     .{' '}
                     <a
@@ -245,7 +236,7 @@ export default function Chat() {
                     </a>{' '}
                     or{' '}
                     <a
-                        href="https://vercel.com/templates/next.js/chat-bot-nextjs-template"
+                        href="https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/llmembed/chat-bot-nextjs-template&env=OPENAI_API_KEY,PINECONE_API_KEY,PINECONE_ENVIRONMENT&envDescription=OpenAPI and Pinecone both provide free accounts. Check the documentation link on how to get these access tokens.&envLink=https://github.com/llmembed/chat-bot-nextjs-template#readme&project-name=chat-bot&demo-title=Steve Jobs Example Chat Bot&demo-description=This example chat bot is trained to answer questions on Steve Jobs. &demo-url=https://gpt-chat-bot-nextjs.vercel.app/&demo-image=https://avatars.githubusercontent.com/u/138303766?s=48&v=4"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-colors hover:text-black"

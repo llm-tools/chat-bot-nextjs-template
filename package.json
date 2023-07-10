@@ -11,7 +11,7 @@
         "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\""
     },
     "dependencies": {
-        "@llmembed/embedjs": "^0.0.30",
+        "@llmembed/embedjs": "^0.0.31",
         "@pinecone-database/pinecone": "^0.1.6",
         "@types/node": "20.3.1",
         "@types/react": "18.2.14",

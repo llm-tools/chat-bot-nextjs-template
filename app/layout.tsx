@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
     title: 'EmbedJs Chat example This is an open source chat bot that is trained on Steve Jobs',
-    description: 'Built with Embejs (https://github.com/llmembed/embedjs)',
+    description: 'Built with Embedjs (https://github.com/llmembed/embedjs)',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
