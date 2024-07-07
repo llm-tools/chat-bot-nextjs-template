@@ -3,12 +3,12 @@
 import { useRef, useState } from 'react';
 import va from '@vercel/analytics';
 import clsx from 'clsx';
-import { VercelIcon, GithubIcon, LoadingCircle, SendIcon } from './icons';
 import { Bot, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Textarea from 'react-textarea-autosize';
 import { toast } from 'sonner';
+import { VercelIcon, GithubIcon, LoadingCircle, SendIcon } from './icons.tsx';
 
 const examples = [
     'Tell me about the early life of Steve Jobs',
@@ -93,6 +93,7 @@ export default function Chat() {
                     <GithubIcon />
                 </a>
             </div>
+
             {messages.length > 0 ? (
                 messages.map((message, i) => (
                     <div
@@ -175,6 +176,7 @@ export default function Chat() {
                     </div>
                 </div>
             )}
+
             <div className="fixed bottom-0 flex w-full flex-col items-center space-y-3 bg-gradient-to-b from-transparent via-gray-100 to-gray-100 p-5 pb-3 sm:px-0">
                 <form
                     ref={formRef}

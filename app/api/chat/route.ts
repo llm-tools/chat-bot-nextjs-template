@@ -1,23 +1,33 @@
-import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server.js';
 
-const { LLMApplicationBuilder, WebLoader, YoutubeLoader, LLMApplication } = require('@llmembed/embedjs');
-const { PineconeDb } = require('@llmembed/embedjs/databases/pinecone');
+import { RAGApplicationBuilder, RAGApplication } from '@llm-tools/embedjs';
+import { PineconeDb } from '@llm-tools/embedjs/vectorDb/pinecone';
 
-let llmApplication: typeof LLMApplication;
-const llmBuilder = new LLMApplicationBuilder()
+let ragApplication: RAGApplication;
+const ragBuilder = new RAGApplicationBuilder()
     .setSearchResultCount(30)
-    .addLoader(new YoutubeLoader({ videoIdOrUrl: 'https://www.youtube.com/watch?v=s4pVFLUlx8g' }))
-    .addLoader(new YoutubeLoader({ videoIdOrUrl: 'https://www.youtube.com/watch?v=JxpSuxBMVXo' }))
-    .addLoader(new WebLoader({ url: 'https://www.biography.com/business-leaders/steve-jobs' }))
-    .addLoader(new WebLoader({ url: 'https://en.wikipedia.org/wiki/Steve_Jobs' }))
-    .setVectorDb(new PineconeDb({ projectName: 'test', namespace: 'dev' }))
-    .setLoaderInit(false); //We have already initialized Pinecone during local development
+    .addLoader({ type: 'Youtube', videoIdOrUrl: 's4pVFLUlx8g' })
+    .addLoader({ type: 'Youtube', videoIdOrUrl: 'JxpSuxBMVXo' })
+    .addLoader({ type: 'Web', urlOrContent: 'https://www.biography.com/business-leaders/steve-jobs' })
+    .addLoader({ type: 'Web', urlOrContent: 'https://en.wikipedia.org/wiki/Steve_Jobs' })
+    .setVectorDb(
+        new PineconeDb({
+            projectName: 'test',
+            namespace: 'dev',
+            indexSpec: {
+                serverless: {
+                    region: 'us-east-1',
+                    cloud: 'aws',
+                },
+            },
+        }),
+    );
 
 export async function POST(req: Request) {
     const body = await req.json();
 
-    if (!llmApplication) llmApplication = await llmBuilder.build();
-    const result = await llmApplication.query(body.query);
+    if (!ragApplication) ragApplication = await ragBuilder.build();
+    const result = await ragApplication.query(body.query);
 
-    return NextResponse.json({ result });
+    return NextResponse.json({ result: result.content });
 }
