@@ -20,6 +20,8 @@ const ragBuilder = new RAGApplicationBuilder().setSearchResultCount(30).setVecto
 export async function POST(req: Request) {
     const body = await req.json();
 
+    //This will actually timeout when running in Vercel, the example is only working in local atm
+    //Move to something like Inngest if you want to run this as is on vercel or refactor to your need
     if (!ragApplication) {
         ragApplication = await ragBuilder.build();
         await ragApplication.deleteAllEmbeddings(true);
